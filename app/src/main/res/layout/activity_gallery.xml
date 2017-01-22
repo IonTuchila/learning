@@ -10,4 +10,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.e7450.bussinesapp.Gallery">
 
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:gravity="center"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp">
+
+
+    </GridView>
 </RelativeLayout>
