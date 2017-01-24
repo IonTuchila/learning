@@ -5,20 +5,20 @@ package com.example.e7450.bussinesapp;
  */
 
 import android.content.Context;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
-import java.util.List;
-
 /**
  * Created by E7450 on 1/18/2017.
  */
 
-public class ImageAdapter extends BaseAdapter {
-    private Context mContext;
+public  class ImageAdapter extends BaseAdapter {
+     Context mContext;
     public Integer[] mThumbIds = {
             R.drawable.download1, R.drawable.download2,
             R.drawable.download3, R.drawable.download4,
@@ -28,8 +28,8 @@ public class ImageAdapter extends BaseAdapter {
 
 
     };
-    public ImageAdapter(Context c){
-        mContext = c;
+     ImageAdapter(Context c){
+       this.mContext = c;
     }
 
     @Override
@@ -37,23 +37,28 @@ public class ImageAdapter extends BaseAdapter {
         return mThumbIds.length;
 
     }
+
+    @Override
     public Object getItem(int position) {
-        return mThumbIds[position];
+        return null;
     }
 
+    @Override
     public long getItemId(int position) {
         return 0;
     }
 
-    // create a new ImageView for each item referenced by the Adapter
+    @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
-            ImageView imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(300, 300));
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            imageView.setImageResource(mThumbIds[position]);
+        ImageView imageView = new ImageView(mContext);
+        imageView.setLayoutParams(new GridView.LayoutParams(300, 300));
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setImageResource(mThumbIds[position]);
+       // ((ViewPager)parent).addView(imageView,0);
         return  imageView;
-        }
     }
 
+
+
+}
 
