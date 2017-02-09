@@ -10,4 +10,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.e7450.bussinesapp.ActivityList">
 
+<TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical|center_horizontal"
+    android:text="ListView"
+    android:textSize="40dp"
+    android:textColor="@android:color/holo_red_light"/>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/ListView">
+
+    </ListView>
+
 </RelativeLayout>

@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.e7450.bussinesapp">
 
-    <activity android:name="info.androidhive.imageslider.FullScreenViewActivity" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,8 +31,11 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".FullImageActivity" />
-
-        <activity android:name=".ImageSlider"/>
+        <activity android:name=".ImageSlider" />
+        <activity android:name=".ActivityList" />
+        <activity android:name=".MyCustomBaseAdapter" />
+        <activity android:name=".SearcheResult" />
+        <activity android:name=".ListAdapter"></activity>
     </application>
 
 </manifest>
