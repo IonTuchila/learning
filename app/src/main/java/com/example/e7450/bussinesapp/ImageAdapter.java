@@ -54,7 +54,7 @@ public  class ImageAdapter extends BaseAdapter {
         imageView.setLayoutParams(new GridView.LayoutParams(300, 300));
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setImageResource(mThumbIds[position]);
-       // ((ViewPager)parent).addView(imageView,0);
+       //((ViewPager)parent).addView(imageView,0);
         return  imageView;
     }
 
