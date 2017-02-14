@@ -20,7 +20,6 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 
@@ -31,7 +30,7 @@ import com.squareup.picasso.Picasso;
 public class FullImageActivity extends Activity {
 
     ViewPager viewPager;
-     Context mContext ;
+    final Context mContext = this;
     public static String LOG_STRING = "LOG";
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -43,7 +42,6 @@ public class FullImageActivity extends Activity {
         super.onCreate(savedIstanceState);
         setContentView(R.layout.full_image);
         Intent i = getIntent();
-        mContext = this;
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         final ImageAdapter imageAdapter = new ImageAdapter(this);
         //viewPager.setAdapter(new Adap(this));
@@ -60,17 +58,7 @@ public class FullImageActivity extends Activity {
                 imageView.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
                 imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 //imageView.setImageResource(imageAdapter.mThumbIds[position]);
-                Picasso.with(mContext).load("http://a3.mzstatic.com/us/r30/Purple41/v4/b6/b1/74/b6b174cd-7f7d-4f39-920a-26186d9a21ee/icon175x175.jpeg").into(imageView, new Callback() {
-                    @Override
-                    public void onSuccess() {
-                        Log.d("OKSUCCES PICASSO","OKSUCCES PICASSO");
-                    }
-
-                    @Override
-                    public void onError() {
-                        Log.d("ERROR PICASSO","ERROR PICASSO");
-                    }
-                });
+                Picasso.with(mContext).load("https://www.simplifiedcoding.net/wp-content/uploads/2015/10/advertise.png").into(imageView);
 
                 container.addView(imageView);
                 Log.d(LOG_STRING, "succes instantiateItem" + position);

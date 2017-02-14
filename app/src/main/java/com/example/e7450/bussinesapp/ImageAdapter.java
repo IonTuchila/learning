@@ -7,8 +7,10 @@ package com.example.e7450.bussinesapp;
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -19,18 +21,17 @@ import android.widget.ImageView;
 
 public  class ImageAdapter extends BaseAdapter {
      Context mContext;
+    private LayoutInflater inflater;
+    private String[] imageUrls;
     public Integer[] mThumbIds = {
             R.drawable.download1, R.drawable.download2,
             R.drawable.download3, R.drawable.download4,
             R.drawable.download5, R.drawable.download6,
             R.drawable.download7, R.drawable.download8,
-            R.drawable.download9, R.drawable.download10
+            R.drawable.download9, R.drawable.download10,
 
 
     };
-     ImageAdapter(Context c){
-       this.mContext = c;
-    }
 
     @Override
     public int getCount() {
@@ -61,4 +62,3 @@ public  class ImageAdapter extends BaseAdapter {
 
 
 }
-
